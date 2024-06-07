@@ -1,0 +1,17 @@
+.image-border {
+    position: relative;
+    display: inline-block;
+}
+
+.image-border::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    width: 100%;
+    height: 68%;
+    z-index: -1;
+    border-right: 10px solid #e5e7eb;
+    border-bottom: 10px solid #e5e7eb;
+    border-radius: 5px;
+}

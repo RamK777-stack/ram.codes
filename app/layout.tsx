@@ -1,4 +1,5 @@
 import 'css/tailwind.css'
+import 'css/custom.css'
 import 'pliny/search/algolia.css'
 
 import { Space_Grotesk } from 'next/font/google'
@@ -80,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <Header />
-                <main className="mb-auto">{children}</main>
+                <main className="mb-auto mt-14">{children}</main>
               </SearchProvider>
               <Footer />
             </div>

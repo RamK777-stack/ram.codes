@@ -2,8 +2,8 @@
 const siteMetadata = {
   title: 'Ramkumar.Barani Blog',
   author: 'Ramkumar.Barani',
-  headerTitle: 'Ramkumar.Barani',
-  description: 'Personal blog',
+  headerTitle: 'Ramkumar.B',
+  description: 'Recent posts',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
@@ -41,7 +41,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: '',
   },
   comments: {
     // If you want to use an analytics provider you have to add it to the

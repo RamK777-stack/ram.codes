@@ -1,6 +1,6 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/writeonce.png'
+import Logo from '@/data/logo.png'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
@@ -38,8 +38,9 @@ const Header = () => {
               {link.title}
             </Link>
           ))}
-        <SearchButton />
+        {/* <SearchButton /> */}
         <ThemeSwitch />
+        <button className='btn rounded-md bg-gray-900 text-white px-4 py-2'>Download CV</button>
         <MobileNav />
       </div>
     </header>
