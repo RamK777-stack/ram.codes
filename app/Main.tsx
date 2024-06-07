@@ -13,94 +13,125 @@ const MAX_DISPLAY = 5
 export default function Home({ posts }) {
   return (
     <>
-      <div className='flex space-x-10'>
-        <div className='mr-10'>
-          <h2 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
+      <div className="flex space-x-10">
+        <div className="mr-10">
+          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Hi, I'm Ramkumar 👋
           </h2>
-          <p className='mt-5'>I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating web applications for over 6 years, I still love it as if it was something new.</p>
+          <p className="mt-5">
+            I'm a full stack developer (React.js & Node.js) with a focus on creating (and
+            occasionally designing) exceptional digital experiences that are fast, accessible,
+            visually appealing, and responsive. Even though I have been creating web applications
+            for over 6 years, I still love it as if it was something new.
+          </p>
           <div className="mt-8">
-            <div className="flex space-x-2 items-center">
+            <div className="flex items-center space-x-2">
               <MapPinIcon className="h-4 w-4" />
               <span>Chennai, India</span>
             </div>
-            <div className="flex space-x-3 items-center ml-1">
-              <div className="bg-green-600 h-2 w-2 rounded-full animate-ping"></div>
+            <div className="ml-1 flex items-center space-x-3">
+              <div className="h-2 w-2 animate-ping rounded-full bg-green-600"></div>
               <span>Available for new projects</span>
             </div>
           </div>
 
-          <div className='mt-5 flex space-x-4'>
+          <div className="mt-5 flex space-x-4">
             <SocialIcon kind="twitter" href={siteMetadata.twitter} size={5} />
             <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={5} />
             <SocialIcon kind="github" href={siteMetadata.github} size={5} />
           </div>
         </div>
-        <div className='image-border'>
-          <Image src={ProfileImage} alt='profile' height={500} width={600} className='rounded-md' />
+        <div className="image-border">
+          <Image src={ProfileImage} alt="profile" height={500} width={600} className="rounded-md" />
         </div>
       </div>
 
-      <div className='mt-16 h-auto flex flex-col items-center'>
-        <div className='text-center'>
-          <div className='px-3 py-2'><span className='bg-gray-200 px-5 py-2 rounded-full'>Work</span></div>
-          <p className='px-3 py-2'>Some of the noteworthy projects I have built:</p>
+      <div className="mt-16 flex h-auto flex-col items-center">
+        <div className="text-center">
+          <div className="px-3 py-2">
+            <span className="rounded-full bg-gray-200 px-5 py-2">Work</span>
+          </div>
+          <p className="px-3 py-2">Some of the noteworthy projects I have built:</p>
 
-          <div className='flex flex-col gap-14 mt-12'>
-            <div className='flex space-x-10 bg-white shadow-lg rounded-lg'>
-              <img src={'/static/images/project-1.jpg'} className='w-1/2 h-100 object-cover rounded-tl-xl rounded-bl-xl' alt='project 1' />
+          <div className="mt-12 flex flex-col gap-14">
+            <div className="flex space-x-10 rounded-lg bg-white shadow-lg">
+              <img
+                src={'/static/images/project-1.jpg'}
+                className="h-100 w-1/2 rounded-bl-xl rounded-tl-xl object-cover"
+                alt="project 1"
+              />
 
-              <div className='flex flex-col justify-center text-left gap-5 px-3'>
-                <h3 className='text-xl font-bold'>Fiskil</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                <div className='flex gap-2 flex-wrap'>
-                  <span className=' text-sm bg-gray-200 px-4 py-1 rounded-full'>React</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>NodeJS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>MongoDB</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>ExpressJS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>TailwindCSS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>ReactQuery</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>NextJS</span>
+              <div className="flex flex-col justify-center gap-5 px-3 text-left">
+                <h3 className="text-xl font-bold">Fiskil</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac
+                  tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia curae.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className=" rounded-full bg-gray-200 px-4 py-1 text-sm">React</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">NodeJS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">MongoDB</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">ExpressJS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">TailwindCSS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">ReactQuery</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">NextJS</span>
                 </div>
-                <ArrowTopRightOnSquareIcon className='h-5 w-5 mx-2 text-primary-500' />
+                <ArrowTopRightOnSquareIcon className="mx-2 h-5 w-5 text-primary-500" />
               </div>
             </div>
 
-            <div className='flex space-x-10 bg-white shadow-lg rounded-lg'>
-              <img src={'/static/images/project-2.jpg'} className='w-1/2 h-80 object-cover rounded-tl-xl rounded-bl-xl' alt='project 1' />
+            <div className="flex space-x-10 rounded-lg bg-white shadow-lg">
+              <img
+                src={'/static/images/project-2.jpg'}
+                className="h-80 w-1/2 rounded-bl-xl rounded-tl-xl object-cover"
+                alt="project 1"
+              />
 
-              <div className='flex flex-col justify-center text-left gap-5 px-3'>
-                <h3 className='text-xl font-bold'>Fiskil</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                <div className='flex gap-2 flex-wrap'>
-                  <span className=' text-sm bg-gray-200 px-4 py-1 rounded-full'>React</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>NodeJS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>MongoDB</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>ExpressJS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>TailwindCSS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>ReactQuery</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>NextJS</span>
+              <div className="flex flex-col justify-center gap-5 px-3 text-left">
+                <h3 className="text-xl font-bold">Fiskil</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac
+                  tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia curae.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className=" rounded-full bg-gray-200 px-4 py-1 text-sm">React</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">NodeJS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">MongoDB</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">ExpressJS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">TailwindCSS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">ReactQuery</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">NextJS</span>
                 </div>
-                <ArrowTopRightOnSquareIcon className='h-5 w-5 mx-2 text-primary-500' />
+                <ArrowTopRightOnSquareIcon className="mx-2 h-5 w-5 text-primary-500" />
               </div>
             </div>
 
-            <div className='flex space-x-10 bg-white shadow-lg rounded-lg'>
-              <img src={'/static/images/project-3.jpg'} className='w-1/2 h-100 object-cover rounded-tl-xl rounded-bl-xl' alt='project 1' />
+            <div className="flex space-x-10 rounded-lg bg-white shadow-lg">
+              <img
+                src={'/static/images/project-3.jpg'}
+                className="h-100 w-1/2 rounded-bl-xl rounded-tl-xl object-cover"
+                alt="project 1"
+              />
 
-              <div className='flex flex-col justify-center text-left gap-5 px-3'>
-                <h3 className='text-xl font-bold'>Fiskil</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                <div className='flex gap-2 flex-wrap'>
-                  <span className=' text-sm bg-gray-200 px-4 py-1 rounded-full'>React</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>NodeJS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>MongoDB</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>ExpressJS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>TailwindCSS</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>ReactQuery</span>
-                  <span className='text-sm bg-gray-200 px-4 py-1 rounded-full'>NextJS</span>
+              <div className="flex flex-col justify-center gap-5 px-3 text-left">
+                <h3 className="text-xl font-bold">Fiskil</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac
+                  tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia curae.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className=" rounded-full bg-gray-200 px-4 py-1 text-sm">React</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">NodeJS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">MongoDB</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">ExpressJS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">TailwindCSS</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">ReactQuery</span>
+                  <span className="rounded-full bg-gray-200 px-4 py-1 text-sm">NextJS</span>
                 </div>
-                <ArrowTopRightOnSquareIcon className='h-5 w-5 mx-2 text-primary-500' />
+                <ArrowTopRightOnSquareIcon className="mx-2 h-5 w-5 text-primary-500" />
               </div>
             </div>
           </div>
@@ -108,9 +139,11 @@ export default function Home({ posts }) {
       </div>
 
       <div className="mt-16">
-        <div className='text-center'>
-          <div className='px-3 py-2'><span className='bg-gray-200 px-5 py-2 rounded-full'>Blog</span></div>
-          <p className='px-3 py-2'> {siteMetadata.description}</p>
+        <div className="text-center">
+          <div className="px-3 py-2">
+            <span className="rounded-full bg-gray-200 px-5 py-2">Blog</span>
+          </div>
+          <p className="px-3 py-2"> {siteMetadata.description}</p>
         </div>
 
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">

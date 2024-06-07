@@ -40,7 +40,7 @@ const Header = () => {
           ))}
         {/* <SearchButton /> */}
         <ThemeSwitch />
-        <button className='btn rounded-md bg-gray-900 text-white px-4 py-2'>Download CV</button>
+        <button className="btn rounded-md bg-gray-900 px-4 py-2 text-white">Download CV</button>
         <MobileNav />
       </div>
     </header>
