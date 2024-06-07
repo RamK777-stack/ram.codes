@@ -10,4 +10,4 @@
 - [ ] Add blogs
 - [ ] Add projects
 
-Created using template - [Tailwind Astro Template](https://github.com/timlrx/tailwind-nextjs-starter-blog).
+Created using template - [Tailwind Template](https://github.com/timlrx/tailwind-nextjs-starter-blog).
