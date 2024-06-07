@@ -27,17 +27,15 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {headerNavLinks
-          .filter((link) => link.href !== '/')
-          .map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
-            >
-              {link.title}
-            </Link>
-          ))}
+        {headerNavLinks.map((link) => (
+          <Link
+            key={link.title}
+            href={link.href}
+            className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+          >
+            {link.title}
+          </Link>
+        ))}
         {/* <SearchButton /> */}
         <ThemeSwitch />
         <button className="btn rounded-md bg-gray-900 px-4 py-2 text-white">Download CV</button>

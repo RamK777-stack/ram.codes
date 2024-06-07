@@ -3,9 +3,11 @@
 ## TODO's
 
 - [x] Initial setup
-- [ ] Change design
-- [ ] Add blogs
-- [ ] Changes projects and about section
+- [x] Change home page design
+- [ ] Responsive design home page
+- [ ] Dark theme howe page
 - [ ] Add Resume 
+- [ ] Add blogs
+- [ ] Add projects
 
 Created using template - [Tailwind Astro Template](https://github.com/timlrx/tailwind-nextjs-starter-blog).
