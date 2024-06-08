@@ -14,7 +14,7 @@ const Header = () => {
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
-              <Image src={Logo} alt="logo" height={40} />
+              <Image src={Logo} alt="logo" height={36} />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden h-6 text-2xl font-semibold sm:block">
@@ -28,17 +28,15 @@ const Header = () => {
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
         {headerNavLinks.map((link) => (
-          <Link
-            key={link.title}
-            href={link.href}
-            className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
-          >
+          <Link key={link.title} href={link.href} className="hidden dark:text-gray-100 sm:block">
             {link.title}
           </Link>
         ))}
         {/* <SearchButton /> */}
         <ThemeSwitch />
-        <button className="btn rounded-md bg-gray-900 px-4 py-2 text-white">Download CV</button>
+        <button className="btn hidden rounded-md bg-zinc-700 px-4 py-2 text-white dark:bg-gray-800 sm:block">
+          Download CV
+        </button>
         <MobileNav />
       </div>
     </header>

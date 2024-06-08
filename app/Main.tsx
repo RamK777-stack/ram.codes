@@ -13,16 +13,17 @@ const MAX_DISPLAY = 5
 export default function Home({ posts }) {
   return (
     <>
-      <div className="flex space-x-10">
+      <div className="flex flex-col space-x-10 md:flex-row lg:flex-row">
         <div className="mr-10">
-          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-zinc-500 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-6xl md:leading-14">
             Hi, I'm Ramkumar 👋
           </h2>
           <p className="mt-5">
-            I'm a full stack developer (React.js & Node.js) with a focus on creating (and
-            occasionally designing) exceptional digital experiences that are fast, accessible,
-            visually appealing, and responsive. Even though I have been creating web applications
-            for over 6 years, I still love it as if it was something new.
+            Full stack developer (React.js & Node.js) with a focus on creating digital experiences
+            that are simple, stunning, and responsive. Even though I have been creating web
+            applications for over 6 years, I still love it as if it was something new. <br></br>
+            <br></br>I am also aspiring to become a web artist, continually pushing the boundaries
+            of design and functionality.
           </p>
           <div className="mt-8">
             <div className="flex items-center space-x-2">
@@ -35,25 +36,122 @@ export default function Home({ posts }) {
             </div>
           </div>
 
-          <div className="mt-5 flex space-x-4">
+          <div className="mt-5 flex space-x-4 text-zinc-700">
             <SocialIcon kind="twitter" href={siteMetadata.twitter} size={5} />
             <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={5} />
             <SocialIcon kind="github" href={siteMetadata.github} size={5} />
           </div>
         </div>
         <div className="image-border">
-          <Image src={ProfileImage} alt="profile" height={500} width={600} className="rounded-md" />
+          <Image
+            src={ProfileImage}
+            alt="profile"
+            height={500}
+            width={600}
+            className="hidden rounded-md object-contain sm:block"
+          />
         </div>
       </div>
 
-      <div className="mt-16 flex h-auto flex-col items-center">
-        <div className="text-center">
+      <div className="mt-14 flex h-auto flex-col items-center">
+        <div className="">
           <div className="px-3 py-2">
-            <span className="rounded-full bg-gray-200 px-5 py-2">Work</span>
+            <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">Work</span>
           </div>
-          <p className="px-3 py-2">Some of the noteworthy projects I have built:</p>
+        </div>
+        <p className="px-3 py-2">Some of the noteworthy projects I have built:</p>
 
-          <div className="mt-12 flex flex-col gap-14">
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-col gap-8">
+            <div>
+              <img
+                src={'/static/images/project-1.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+            <div>
+              <img
+                src={'/static/images/project-2.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+            <div>
+              <img
+                src={'/static/images/project-3.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+          </div>
+          <div className="flex flex-col gap-8">
+            <div>
+              <img
+                src={'/static/images/project-1.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+            <div>
+              <img
+                src={'/static/images/project-4.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+            <div>
+              <img
+                src={'/static/images/project-5.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+          </div>
+          <div className="flex flex-col gap-8">
+            <div>
+              <img
+                src={'/static/images/project-6.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+            <div>
+              <img
+                src={'/static/images/project-3.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+            <div>
+              <img
+                src={'/static/images/project-5.jpg'}
+                className="w-100 h-auto rounded object-cover "
+                alt="project 1"
+              />
+              <h3 className="text-lg font-semibold">Apple</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="mt-12 flex flex-col gap-14">
             <div className="flex space-x-10 rounded-lg bg-white shadow-lg">
               <img
                 src={'/static/images/project-1.jpg'}
@@ -134,14 +232,13 @@ export default function Home({ posts }) {
                 <ArrowTopRightOnSquareIcon className="mx-2 h-5 w-5 text-primary-500" />
               </div>
             </div>
-          </div>
-        </div>
+          </div> */}
       </div>
 
-      <div className="mt-16">
+      <div className="mt-14">
         <div className="text-center">
           <div className="px-3 py-2">
-            <span className="rounded-full bg-gray-200 px-5 py-2">Blog</span>
+            <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">Blog</span>
           </div>
           <p className="px-3 py-2"> {siteMetadata.description}</p>
         </div>
@@ -156,18 +253,15 @@ export default function Home({ posts }) {
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="text-base font-medium leading-6 text-zinc-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
+                          <h2 className="text-2xl font-semibold leading-8 tracking-tight">
+                            <Link href={`/blog/${slug}`} className="dark:text-gray-100">
                               {title}
                             </Link>
                           </h2>
@@ -177,14 +271,12 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                         </div>
-                        <div className="prose max-w-none text-gray-700 dark:text-gray-500">
-                          {summary}
-                        </div>
+                        <div className="prose max-w-none dark:text-zinc-300">{summary}</div>
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="text-primary-500 hover:text-primary-600 dark:text-zinc-300 dark:hover:text-primary-400"
                           aria-label={`Read more: "${title}"`}
                         >
                           Read more &rarr;

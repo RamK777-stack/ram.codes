@@ -68,6 +68,11 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
+          <div className="px-12 py-4">
+            <button className="btn rounded-md bg-zinc-700 px-4 py-2 text-white dark:bg-gray-800 sm:block">
+              Download CV
+            </button>
+          </div>
         </nav>
       </div>
     </>
