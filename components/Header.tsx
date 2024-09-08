@@ -34,11 +34,12 @@ const Header = () => {
         ))}
         {/* <SearchButton /> */}
         <ThemeSwitch />
-        <a className="btn hidden rounded-md bg-zinc-700 px-4 py-2 text-white dark:bg-gray-800 sm:block"
+        <a
+          className="btn hidden rounded-md bg-zinc-700 px-4 py-2 text-white dark:bg-gray-800 sm:block"
           href="https://drive.google.com/file/d/1iyPFg_6m9RapHRGm17l27MjKaYe6Hato/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          >
+        >
           Download CV
         </a>
         <MobileNav />

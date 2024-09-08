@@ -13,15 +13,17 @@ const MAX_DISPLAY = 5
 export default function Home({ posts }) {
   return (
     <>
-      <div className="flex flex-col md:flex-row lg:flex-row space-x-10">
+      <div className="flex flex-col space-x-10 md:flex-row lg:flex-row">
         <div className="mr-10">
-          <h2 className="text-2xl sm:text-3xl font-extrabold leading-9 tracking-tight text-zinc-500 dark:text-gray-100 sm:leading-10 md:text-6xl md:leading-14">
+          <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-zinc-500 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-6xl md:leading-14">
             Hi, I'm Ramkumar 👋
           </h2>
           <p className="mt-5">
-            Full stack developer (React.js & Node.js) with a focus on creating digital experiences that are simple,
-            stunning, and responsive. Even though I have been creating web applications
-            for over 6 years, I still love it as if it was something new. <br></br><br></br>I am also aspiring to become a web artist, continually pushing the boundaries of design and functionality.
+            Full stack developer (React.js & Node.js) with a focus on creating digital experiences
+            that are simple, stunning, and responsive. Even though I have been creating web
+            applications for over 6 years, I still love it as if it was something new. <br></br>
+            <br></br>I am also aspiring to become a web artist, continually pushing the boundaries
+            of design and functionality.
           </p>
           <div className="mt-8">
             <div className="flex items-center space-x-2">
@@ -41,104 +43,110 @@ export default function Home({ posts }) {
           </div>
         </div>
         <div className="image-border">
-          <Image src={ProfileImage} alt="profile" height={500} width={600} className="rounded-md object-contain hidden sm:block" />
+          <Image
+            src={ProfileImage}
+            alt="profile"
+            height={500}
+            width={600}
+            className="hidden rounded-md object-contain sm:block"
+          />
         </div>
       </div>
 
       <div className="mt-14 flex h-auto flex-col items-center">
         <div className="">
           <div className="px-3 py-2">
-            <span className="rounded-full bg-gray-200 dark:bg-gray-800 px-5 py-2">Work</span>
+            <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">Work</span>
           </div>
         </div>
         <p className="px-3 py-2">Some of the noteworthy projects I have built:</p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div className='flex flex-col gap-8'>
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-col gap-8">
             <div>
               <img
                 src={'/static/images/project-1.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
             <div>
               <img
                 src={'/static/images/project-2.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
             <div>
               <img
                 src={'/static/images/project-3.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
           </div>
-          <div className='flex flex-col gap-8'>
+          <div className="flex flex-col gap-8">
             <div>
               <img
                 src={'/static/images/project-1.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
             <div>
               <img
                 src={'/static/images/project-4.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
             <div>
               <img
                 src={'/static/images/project-5.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
           </div>
-          <div className='flex flex-col gap-8'>
+          <div className="flex flex-col gap-8">
             <div>
               <img
                 src={'/static/images/project-6.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
             <div>
               <img
                 src={'/static/images/project-3.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
             <div>
               <img
                 src={'/static/images/project-5.jpg'}
-                className="h-auto w-100 object-cover rounded "
+                className="w-100 h-auto rounded object-cover "
                 alt="project 1"
               />
               <h3 className="text-lg font-semibold">Apple</h3>
-              <h3 className="text-lg text-zinc-500 leading-4">Notes</h3>
+              <h3 className="text-lg leading-4 text-zinc-500">Notes</h3>
             </div>
           </div>
         </div>
@@ -230,7 +238,7 @@ export default function Home({ posts }) {
       <div className="mt-14">
         <div className="text-center">
           <div className="px-3 py-2">
-            <span className="rounded-full bg-gray-200 dark:bg-gray-800 px-5 py-2">Blog</span>
+            <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">Blog</span>
           </div>
           <p className="px-3 py-2"> {siteMetadata.description}</p>
         </div>
@@ -253,10 +261,7 @@ export default function Home({ posts }) {
                       <div className="space-y-6">
                         <div>
                           <h2 className="text-2xl font-semibold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="dark:text-gray-100"
-                            >
+                            <Link href={`/blog/${slug}`} className="dark:text-gray-100">
                               {title}
                             </Link>
                           </h2>
@@ -266,14 +271,12 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                         </div>
-                        <div className="prose max-w-none dark:text-zinc-300">
-                          {summary}
-                        </div>
+                        <div className="prose max-w-none dark:text-zinc-300">{summary}</div>
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 dark:text-zinc-300 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="text-primary-500 hover:text-primary-600 dark:text-zinc-300 dark:hover:text-primary-400"
                           aria-label={`Read more: "${title}"`}
                         >
                           Read more &rarr;
