@@ -31,7 +31,15 @@ interface LayoutProps {
   children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children, viewOnPlatform, viewOnUrl }: LayoutProps) {
+export default function PostLayout({
+  content,
+  authorDetails,
+  next,
+  prev,
+  children,
+  viewOnPlatform,
+  viewOnUrl,
+}: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
 
@@ -102,7 +110,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   Discuss on Twitter
                 </Link>
                 {` • `}
-               {viewOnUrl && <Link href={viewOnUrl}>View on {viewOnPlatform}</Link>}
+                {viewOnUrl && <Link href={viewOnUrl}>View on {viewOnPlatform}</Link>}
               </div>
               {siteMetadata.comments && (
                 <div

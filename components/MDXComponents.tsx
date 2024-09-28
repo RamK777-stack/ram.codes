@@ -13,5 +13,4 @@ export const components: MDXComponents = {
   pre: Pre,
   table: TableWrapper,
   BlogNewsletterForm,
-  iframe: (props) => <iframe {...props} style={{ width: '100%', height: '300px' }} />,
 }

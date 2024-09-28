@@ -1,4 +1,3 @@
-
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
@@ -117,10 +116,14 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Layout content={mainContent}
+      <Layout
+        content={mainContent}
         viewOnPlatform={post.viewOnPlatform}
         viewOnUrl={post.viewOnUrl}
-        authorDetails={authorDetails} next={next} prev={prev}>
+        authorDetails={authorDetails}
+        next={next}
+        prev={prev}
+      >
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
     </>
