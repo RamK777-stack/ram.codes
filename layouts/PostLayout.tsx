@@ -24,12 +24,14 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 interface LayoutProps {
   content: CoreContent<Blog>
   authorDetails: CoreContent<Authors>[]
+  viewOnPlatform?: string
+  viewOnUrl?: string
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
+export default function PostLayout({ content, authorDetails, next, prev, children, viewOnPlatform, viewOnUrl }: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
 
@@ -100,7 +102,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   Discuss on Twitter
                 </Link>
                 {` • `}
-                <Link href={editUrl(filePath)}>View on GitHub</Link>
+               {viewOnUrl && <Link href={viewOnUrl}>View on {viewOnPlatform}</Link>}
               </div>
               {siteMetadata.comments && (
                 <div

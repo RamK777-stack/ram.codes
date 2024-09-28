@@ -6035,6 +6035,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^11.9.0":
+  version: 11.9.0
+  resolution: "framer-motion@npm:11.9.0"
+  dependencies:
+    tslib: ^2.4.0
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 9aabbd9eeddbc79cb59068336d7700a62f4ab28c116a7f9285c9fe1145c82618331013fa7a80359109a0feba4b85375379c50e40edbcea251d72a06100c6d79f
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^2.0.0":
   version: 2.1.0
   resolution: "fs-minipass@npm:2.1.0"
@@ -7764,6 +7784,15 @@ __metadata:
   dependencies:
     yallist: ^3.0.2
   checksum: c154ae1cbb0c2206d1501a0e94df349653c92c8cbb25236d7e85190bcaf4567a03ac6eb43166fabfa36fd35623694da7233e88d9601fbf411a9a481d85dbd2cb
+  languageName: node
+  linkType: hard
+
+"lucide-react@npm:^0.446.0":
+  version: 0.446.0
+  resolution: "lucide-react@npm:0.446.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+  checksum: 5cd918355c1fbed8b2bb8152aa9eb1e7827be9ecb4560ef078fb8fc7bdd639ac41e96695ec2cd229e713190f43e82da6e92805162a9617a9bad76d5ff7cc2abe
   languageName: node
   linkType: hard
 
@@ -9783,12 +9812,14 @@ __metadata:
     eslint-config-next: 14.2.1
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^5.0.0
+    framer-motion: ^11.9.0
     github-slugger: ^2.0.0
     gray-matter: ^4.0.2
     hast-util-from-html-isomorphic: ^2.0.0
     husky: ^9.0.0
     image-size: 1.0.0
     lint-staged: ^13.0.0
+    lucide-react: ^0.446.0
     next: 14.2.1
     next-contentlayer2: 0.4.4
     next-themes: ^0.3.0

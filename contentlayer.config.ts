@@ -1,4 +1,4 @@
-import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/source-files'
+import { defineDocumentType, ComputedFields, makeSource, defineNestedType } from 'contentlayer2/source-files'
 import { writeFileSync } from 'fs'
 import readingTime from 'reading-time'
 import { slug } from 'github-slugger'
@@ -100,6 +100,8 @@ export const Blog = defineDocumentType(() => ({
     lastmod: { type: 'date' },
     draft: { type: 'boolean' },
     summary: { type: 'string' },
+    viewOnPlatform: { type: 'string' },
+    viewOnUrl: { type: 'string' },
     images: { type: 'json' },
     authors: { type: 'list', of: { type: 'string' } },
     layout: { type: 'string' },
