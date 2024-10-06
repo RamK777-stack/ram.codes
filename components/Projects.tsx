@@ -72,7 +72,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <section className="bg-white dark:bg-gray-900 mt-14">
+    <section className="mt-14">
       <div className="container mx-auto">
         <motion.h2
           className="mb-2 text-center tracking-tight"
