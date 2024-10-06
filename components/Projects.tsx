@@ -72,7 +72,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 mt-14">
       <div className="container mx-auto">
         <motion.h2
           className="mb-2 text-center tracking-tight"
@@ -91,7 +91,7 @@ export default function Projects() {
           Some of the noteworthy projects I have built
         </motion.p>
 
-        <div className="grid grid-cols-1 gap-8 py-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -101,7 +101,7 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setSelectedProject(project)}
             >
-              <div className="relative mb-6 h-60 overflow-hidden">
+              <div className="relative mb-6 h-60 overflow-hidden rounded-md">
                 <Image
                   src={project.image}
                   alt={project.title}
