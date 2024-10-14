@@ -36,43 +36,19 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Project Harmony',
-    description: 'Collaborative workspace',
-    image: '/static/images/project-1.jpg',
+    title: 'JIRA Bot',
+    description: 'Smart JIRA Bot (Coming Soon)',
+    image: '/static/images/jira-bot.png',
     details:
-      'A next-generation collaborative workspace that seamlessly integrates project management, communication, and file sharing. Designed for modern teams, it enhances productivity and fosters creativity.',
-  },
-  {
-    id: 4,
-    title: 'EcoTrack',
-    description: 'Sustainability monitor',
-    image: '/static/images/project-1.gif',
-    details:
-      'An innovative application that helps individuals and businesses track and reduce their carbon footprint. With intuitive visualizations and actionable insights, EcoTrack makes sustainability accessible to everyone.',
-  },
-  {
-    id: 5,
-    title: 'MindfulMinutes',
-    description: 'Meditation companion',
-    image: '/static/images/project-1.gif',
-    details:
-      'A beautifully designed meditation app that offers guided sessions, ambient sounds, and progress tracking. MindfulMinutes helps users cultivate mindfulness and reduce stress in their daily lives.',
-  },
-  {
-    id: 6,
-    title: 'UrbanExplorer',
-    description: 'City discovery app',
-    image: '/static/images/project-1.gif',
-    details:
-      'An immersive city exploration app that combines augmented reality, local recommendations, and historical insights. UrbanExplorer turns every walk into an adventure, revealing the hidden stories of urban landscapes.',
-  },
+      'Boost productivity with our AI-powered JIRA assistant, delivering smart summaries, predictions, and insights directly in your browser.',
+  }
 ]
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <section className="mt-14">
+    <>
       <div className="container mx-auto">
         <motion.h2
           className="mb-2 text-center tracking-tight"
@@ -201,6 +177,6 @@ export default function Projects() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </>
   )
 }

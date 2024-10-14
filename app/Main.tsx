@@ -54,7 +54,9 @@ export default function Home({ posts }) {
         </div>
       </div>
 
-      <Projects />
+      <section className="mt-14">
+        <Projects />
+      </section>
 
       <div className="mt-14">
         <div className="text-center">
