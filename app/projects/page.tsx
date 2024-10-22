@@ -6,7 +6,5 @@ import Projects from '@/components/Projects'
 export const metadata = genPageMetadata({ title: 'Projects' })
 
 export default function index() {
-  return (
-      <Projects />
-  )
+  return <Projects />
 }

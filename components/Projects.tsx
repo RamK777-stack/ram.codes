@@ -41,7 +41,7 @@ const projects: Project[] = [
     image: '/static/images/jira-bot.png',
     details:
       'Boost productivity with our AI-powered JIRA assistant, delivering smart summaries, predictions, and insights directly in your browser.',
-  }
+  },
 ]
 
 export default function Projects() {
@@ -67,7 +67,7 @@ export default function Projects() {
           Some of the noteworthy projects I have built
         </motion.p>
 
-        <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
