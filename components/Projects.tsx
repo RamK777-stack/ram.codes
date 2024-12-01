@@ -13,6 +13,7 @@ interface Project {
   image: string
   details: string
   link?: string
+  tags: Array<string>
 }
 
 const projects: Project[] = [
@@ -24,6 +25,7 @@ const projects: Project[] = [
     details:
       'An intelligent meal planning assistant that creates personalized recipes based on your dietary preferences and nutritional needs. Leveraging advanced AI algorithms, it offers a seamless and intuitive experience for health-conscious individuals.',
     link: 'https://smartmeal.vercel.app',
+    tags: ["React", "Tailwind CSS", "Next.js", "Claude"],
   },
   {
     id: 2,
@@ -33,12 +35,14 @@ const projects: Project[] = [
     details:
       'A sophisticated tool designed to generate visually stunning PDF carousels optimized for LinkedIn. Enhance your professional presence with engaging, shareable content that stands out in the feed.',
     link: 'https://pdf-carousal.vercel.app',
+    tags: ["React", "Tailwind CSS", "Pdf.js"],
   },
   {
     id: 3,
     title: 'JIRA Bot',
     description: 'Smart JIRA Bot (Coming Soon)',
     image: '/static/images/jira-bot.png',
+    tags: ["React", "Tailwind CSS", "Next.js", "Claude"],
     details:
       'Boost productivity with our AI-powered JIRA assistant, delivering smart summaries, predictions, and insights directly in your browser.',
   },
@@ -56,7 +60,7 @@ export default function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">Work</span>
+          <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">Personal Projects</span>
         </motion.h2>
         <motion.p
           className="px-3 py-2 text-center text-gray-600 dark:text-gray-400"
@@ -64,7 +68,7 @@ export default function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Some of the noteworthy projects I have built
+          Some of the noteworthy projects I have built. Each project is unique and solves a specific problem.
         </motion.p>
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -86,12 +90,24 @@ export default function Projects() {
                   className="transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <h3 className="mb-2 text-2xl font-semibold transition-colors duration-300">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
+              <div className='leading-3'>
+                <h3 className="mb-2 text-2xl font-semibold transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
+              </div>
+              <div className="flex flex-wrap gap-2 mt-3">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 text-xs bg-gray-300 text-secondary-foreground rounded"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <motion.div
-                className="mt-4 flex items-center text-blue-600 dark:text-blue-400"
+                className="mt-5 flex items-center text-blue-600 dark:text-blue-400"
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
@@ -155,6 +171,8 @@ export default function Projects() {
               <p className="mb-4 max-h-32 overflow-y-auto text-sm text-gray-800 dark:text-gray-200">
                 {selectedProject.details}
               </p>
+
+
               {selectedProject.link ? (
                 <a
                   href={selectedProject.link}

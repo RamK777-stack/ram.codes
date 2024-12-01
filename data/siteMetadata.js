@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Ramkumar.Barani Blog',
   author: 'Ramkumar.Barani',
   headerTitle: '',
-  description: 'Recent posts',
+  description: 'Explore my latest insights and technical articles.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',

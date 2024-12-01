@@ -1,3 +1,5 @@
+'use client'
+
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.png'
@@ -6,10 +8,13 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const pathname = usePathname()
+
   return (
-    <header className="flex items-center justify-between py-10">
+    <header className="flex items-center justify-between py-10 ">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
@@ -27,11 +32,17 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {headerNavLinks.map((link) => (
-          <Link key={link.title} href={link.href} className="hidden dark:text-gray-100 sm:block">
-            {link.title}
-          </Link>
-        ))}
+        {headerNavLinks.map((link) => {
+          const isActive = pathname === link.href
+          return (
+            <Link key={link.title} href={link.href} className="hidden dark:text-gray-100 sm:block relative group">
+              <span className="text-gray-900 dark:text-gray-100 transition-colors duration-200 ease-in-out">
+                {link.title}
+              </span>
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gray-700 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+            </Link>)
+        })}
         {/* <SearchButton /> */}
         <ThemeSwitch />
         <a
