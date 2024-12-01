@@ -61,7 +61,9 @@ export default function Home({ posts }) {
       <div className="mt-14">
         <div className="text-center">
           <div className="px-3 py-2">
-            <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">Technical Blog</span>
+            <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">
+              Technical Blog
+            </span>
           </div>
           <p className="px-3 py-2"> {siteMetadata.description}</p>
         </div>

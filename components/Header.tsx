@@ -35,13 +35,21 @@ const Header = () => {
         {headerNavLinks.map((link) => {
           const isActive = pathname === link.href
           return (
-            <Link key={link.title} href={link.href} className="hidden dark:text-gray-100 sm:block relative group">
-              <span className="text-gray-900 dark:text-gray-100 transition-colors duration-200 ease-in-out">
+            <Link
+              key={link.title}
+              href={link.href}
+              className="group relative hidden dark:text-gray-100 sm:block"
+            >
+              <span className="text-gray-900 transition-colors duration-200 ease-in-out dark:text-gray-100">
                 {link.title}
               </span>
-              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gray-700 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
-            </Link>)
+              <span
+                className={`absolute -bottom-1 left-0 h-0.5 bg-gray-700 transition-all duration-300 ${
+                  isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}
+              ></span>
+            </Link>
+          )
         })}
         {/* <SearchButton /> */}
         <ThemeSwitch />
