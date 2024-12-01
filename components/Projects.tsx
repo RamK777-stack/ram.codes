@@ -70,8 +70,7 @@ export default function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Some of the noteworthy projects I have built. Each project is unique and solves a specific
-          problem.
+          Projects I've built, each built to solve a unique challenge.
         </motion.p>
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

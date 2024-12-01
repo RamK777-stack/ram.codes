@@ -8,6 +8,7 @@ import Image from 'next/image'
 import SocialIcon from '@/components/social-icons'
 import ProfileImage from '@/data/profile.jpg'
 import Projects from '@/components/Projects'
+import { MailIcon } from 'lucide-react'
 
 const MAX_DISPLAY = 5
 
@@ -38,6 +39,7 @@ export default function Home({ posts }) {
           </div>
 
           <div className="mt-5 flex space-x-4 text-zinc-700">
+            <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
             <SocialIcon kind="twitter" href={siteMetadata.twitter} size={5} />
             <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={5} />
             <SocialIcon kind="github" href={siteMetadata.github} size={5} />
@@ -65,7 +67,9 @@ export default function Home({ posts }) {
               Technical Blog
             </span>
           </div>
-          <p className="px-3 py-2"> {siteMetadata.description}</p>
+          <p className="px-3 py-2 text-gray-600 dark:text-gray-400">
+            Explore my latest insights and technical articles
+          </p>
         </div>
 
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">

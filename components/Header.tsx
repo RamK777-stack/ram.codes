@@ -44,7 +44,7 @@ const Header = () => {
                 {link.title}
               </span>
               <span
-                className={`absolute -bottom-1 left-0 h-0.5 bg-gray-700 transition-all duration-300 ${
+                className={`absolute -bottom-1 left-0 h-0.5 bg-gray-700 transition-all duration-300 dark:bg-white ${
                   isActive ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}
               ></span>
