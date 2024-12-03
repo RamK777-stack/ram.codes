@@ -21,13 +21,6 @@ const layouts = {
   PostBanner,
 }
 
-interface PageProps {
-  params: {
-    slug: string[];
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -87,8 +80,11 @@ export const generateStaticParams = async () => {
   return paths
 }
 
-export default async function Page({ params }: PageProps) {
-  const slug = decodeURI(params.slug.join('/'))
+type Params = Promise<{ slug: string }>
+
+export default async function Page(props: { params: Params }) {
+  const params = await props.params
+  const slug = params.slug
   // Filter out drafts in production
   const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
