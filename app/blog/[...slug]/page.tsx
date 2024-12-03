@@ -21,12 +21,12 @@ const layouts = {
   PostBanner,
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string[] }
-}): Promise<Metadata | undefined> {
-  const slug = decodeURI(params.slug.join('/'))
+type Params = Promise<{ slug: string }>
+
+export async function generateMetadata(props: { params: Params }): Promise<Metadata | undefined> {
+  const params = await props.params
+  const slug = params.slug
+
   const post = allBlogs.find((p) => p.slug === slug)
   const authorList = post?.authors || ['default']
   const authorDetails = authorList.map((author) => {
@@ -79,8 +79,6 @@ export const generateStaticParams = async () => {
 
   return paths
 }
-
-type Params = Promise<{ slug: string }>
 
 export default async function Page(props: { params: Params }) {
   const params = await props.params
