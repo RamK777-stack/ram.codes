@@ -5,15 +5,9 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
 import { X, ExternalLink } from 'lucide-react'
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 
 interface Project {
   id: number
@@ -92,7 +86,7 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card
-                className="cursor-pointer h-full flex flex-col transition-shadow hover:shadow-lg"
+                className="flex h-full cursor-pointer flex-col transition-shadow hover:shadow-lg"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -105,15 +99,17 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader className="p-3 pb-0">
-                  <div className='line-clamp-3'>
+                  <div className="line-clamp-3">
                     <CardTitle className="text-lg">{project.title}</CardTitle>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
+                    <p className="line-clamp-2 text-sm text-muted-foreground">
+                      {project.description}
+                    </p>
                   </div>
                 </CardHeader>
-                <CardContent className="px-2 mt-2 pb-5 flex-grow">
+                <CardContent className="mt-2 flex-grow px-2 pb-5">
                   <div className="mt-2 flex flex-wrap gap-1">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs px-2 py-1">
+                      <Badge key={tag} variant="secondary" className="px-2 py-1 text-xs">
                         {tag}
                       </Badge>
                     ))}
@@ -122,11 +118,14 @@ export default function Projects() {
                 <CardFooter className="px-2 pb-2">
                   <Button
                     variant="ghost"
-                    className="w-full justify-between group hover:bg-gradient-to-r from-primary to-secondary hover:text-primary-foreground transition-all duration-300 relative overflow-hidden"
+                    className="from-primary hover:text-primary-foreground group relative w-full justify-between overflow-hidden to-secondary transition-all duration-300 hover:bg-gradient-to-r"
                   >
-                    <span className="z-10 relative">View Project</span>
-                    <ChevronRight size={18} className="z-10 relative transition-transform duration-300 group-hover:translate-x-1" />
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    <span className="relative z-10">View Project</span>
+                    <ChevronRight
+                      size={18}
+                      className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                    <span className="bg-primary absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transform transition-transform duration-300 group-hover:scale-x-100"></span>
                   </Button>
                 </CardFooter>
               </Card>

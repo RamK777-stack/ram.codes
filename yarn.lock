@@ -9192,7 +9192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:latest":
+"next@npm:^15.0.3":
   version: 15.0.3
   resolution: "next@npm:15.0.3"
   dependencies:
@@ -10080,7 +10080,7 @@ __metadata:
     image-size: 1.0.0
     lint-staged: ^13.0.0
     lucide-react: ^0.464.0
-    next: latest
+    next: ^15.0.3
     next-contentlayer2: 0.4.4
     next-themes: ^0.3.0
     pliny: 0.2.0

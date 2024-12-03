@@ -29,7 +29,7 @@
     "hast-util-from-html-isomorphic": "^2.0.0",
     "image-size": "1.0.0",
     "lucide-react": "^0.464.0",
-    "next": "latest",
+    "next": "^15.0.3",
     "next-contentlayer2": "0.4.4",
     "next-themes": "^0.3.0",
     "pliny": "0.2.0",
