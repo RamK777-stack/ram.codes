@@ -8,7 +8,7 @@ import Image from 'next/image'
 import SocialIcon from '@/components/social-icons'
 import ProfileImage from '@/data/profile.jpg'
 import Projects from '@/components/Projects'
-import { MailIcon } from 'lucide-react'
+import { Badge } from "@/components/ui/badge"
 
 const MAX_DISPLAY = 5
 
@@ -32,10 +32,13 @@ export default function Home({ posts }) {
               <MapPinIcon className="h-4 w-4" />
               <span>Chennai, India</span>
             </div>
-            <div className="ml-1 flex items-center space-x-3">
-              <div className="h-2 w-2 animate-ping rounded-full bg-green-600"></div>
+            <Badge variant="secondary" className="inline-flex items-center space-x-2 rounded-full mt-1 text-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
               <span>Available for new projects</span>
-            </div>
+            </Badge>
           </div>
 
           <div className="mt-5 flex space-x-4 text-zinc-700">
