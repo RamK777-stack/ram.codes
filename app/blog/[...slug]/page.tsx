@@ -21,11 +21,11 @@ const layouts = {
   PostBanner,
 }
 
-type Params = Promise<{ slug: string }>
+type Params = Promise<{ slug: string[] }>
 
 export async function generateMetadata(props: { params: Params }): Promise<Metadata | undefined> {
   const params = await props.params
-  const slug = params.slug
+  const slug = decodeURI(params.slug.join('/'))
 
   const post = allBlogs.find((p) => p.slug === slug)
   const authorList = post?.authors || ['default']
@@ -82,7 +82,7 @@ export const generateStaticParams = async () => {
 
 export default async function Page(props: { params: Params }) {
   const params = await props.params
-  const slug = params.slug
+  const slug = decodeURI(params.slug?.join('/'))
   // Filter out drafts in production
   const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
@@ -108,8 +108,6 @@ export default async function Page(props: { params: Params }) {
   })
 
   const Layout = layouts[post.layout || defaultLayout]
-
-  console.log(post)
 
   return (
     <>

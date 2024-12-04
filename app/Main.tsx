@@ -1,14 +1,14 @@
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import { MapPinIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import { MapPinIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import SocialIcon from '@/components/social-icons'
 import ProfileImage from '@/data/profile.jpg'
 import Projects from '@/components/Projects'
 import { Badge } from "@/components/ui/badge"
+import { Card, CardHeader, CardFooter, CardTitle } from "@/components/ui/card"
 
 const MAX_DISPLAY = 5
 
@@ -75,52 +75,50 @@ export default function Home({ posts }) {
           </p>
         </div>
 
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((post) => {
-            const { slug, date, title, summary, tags } = post
+        {!posts.length && 'No posts found.'}
+
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-7'>
+          {posts.slice(0, MAX_DISPLAY).map((post, index) => {
+            const { slug, date, title, summary, tags, coverImage } = post
             return (
-              <li key={slug} className="py-7">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-zinc-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-semibold leading-8 tracking-tight">
-                            <Link href={`/blog/${slug}`} className="dark:text-gray-100">
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none dark:text-zinc-300">{summary}</div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:text-zinc-300 dark:hover:text-primary-400"
-                          aria-label={`Read more: "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
+              <Link href={`/blog/${slug}`} className='group cursor-pointer'>
+                <Card
+                  key={slug}
+                  className="flex h-full flex-col transition-shadow hover:shadow-lg"
+                >
+                  <div className="relative h-48 overflow-hidden rounded-t-lg">
+                    <Image
+                      src={coverImage}
+                      alt={title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-300 group-hover:scale-105"
+                    />
                   </div>
-                </article>
-              </li>
+                  <CardHeader className="p-3">
+                    <time className="text-sm text-muted-foreground mb-2" dateTime={date}>
+                      {formatDate(date, siteMetadata.locale)}
+                    </time>
+                    <CardTitle className="text-lg">{title}</CardTitle>
+                    <p className="line-clamp-2 text-sm text-muted-foreground">
+                      {summary}
+                    </p>
+                  </CardHeader>
+
+                  <CardFooter className="px-3 pb-3 mt-auto flex flex-col items-start">
+                    <div className="flex flex-wrap gap-1">
+                      {tags.map((tag) => (
+                        <Badge key={tag} variant="secondary" className="px-2 py-1 text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardFooter>
+                </Card>
+              </Link>
             )
           })}
-        </ul>
+        </div>
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
