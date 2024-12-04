@@ -7,8 +7,8 @@ import Image from 'next/image'
 import SocialIcon from '@/components/social-icons'
 import ProfileImage from '@/data/profile.jpg'
 import Projects from '@/components/Projects'
-import { Badge } from "@/components/ui/badge"
-import { Card, CardHeader, CardFooter, CardTitle } from "@/components/ui/card"
+import { Badge } from '@/components/ui/badge'
+import { Card, CardHeader, CardFooter, CardTitle } from '@/components/ui/card'
 
 const MAX_DISPLAY = 5
 
@@ -32,10 +32,13 @@ export default function Home({ posts }) {
               <MapPinIcon className="h-4 w-4" />
               <span>Chennai, India</span>
             </div>
-            <Badge variant="secondary" className="inline-flex items-center space-x-2 rounded-full mt-1 text-md">
+            <Badge
+              variant="secondary"
+              className="text-md mt-1 inline-flex items-center space-x-2 rounded-full"
+            >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
               </span>
               <span>Available for new projects</span>
             </Badge>
@@ -77,15 +80,12 @@ export default function Home({ posts }) {
 
         {!posts.length && 'No posts found.'}
 
-        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-7'>
+        <div className="mt-7 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.slice(0, MAX_DISPLAY).map((post, index) => {
             const { slug, date, title, summary, tags, coverImage } = post
             return (
-              <Link href={`/blog/${slug}`} className='group cursor-pointer'>
-                <Card
-                  key={slug}
-                  className="flex h-full flex-col transition-shadow hover:shadow-lg"
-                >
+              <Link key={slug} href={`/blog/${slug}`} className="group cursor-pointer">
+                <Card key={slug} className="flex h-full flex-col transition-shadow hover:shadow-lg">
                   <div className="relative h-48 overflow-hidden rounded-t-lg">
                     <Image
                       src={coverImage}
@@ -96,16 +96,14 @@ export default function Home({ posts }) {
                     />
                   </div>
                   <CardHeader className="p-3">
-                    <time className="text-sm text-muted-foreground mb-2" dateTime={date}>
+                    <time className="mb-2 text-sm text-muted-foreground" dateTime={date}>
                       {formatDate(date, siteMetadata.locale)}
                     </time>
                     <CardTitle className="text-lg">{title}</CardTitle>
-                    <p className="line-clamp-2 text-sm text-muted-foreground">
-                      {summary}
-                    </p>
+                    <p className="line-clamp-2 text-sm text-muted-foreground">{summary}</p>
                   </CardHeader>
 
-                  <CardFooter className="px-3 pb-3 mt-auto flex flex-col items-start">
+                  <CardFooter className="mt-auto flex flex-col items-start px-3 pb-3">
                     <div className="flex flex-wrap gap-1">
                       {tags.map((tag) => (
                         <Badge key={tag} variant="secondary" className="px-2 py-1 text-xs">

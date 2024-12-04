@@ -115,7 +115,7 @@ export default function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="px-0 hover:px-2 transition-all duration-300 pb-2">
+                <CardFooter className="px-0 pb-2 transition-all duration-300 hover:px-2">
                   <Button
                     variant="ghost"
                     className="from-primary hover:text-primary-foreground group relative w-full justify-between overflow-hidden to-secondary transition-all duration-300 hover:bg-gradient-to-r"
