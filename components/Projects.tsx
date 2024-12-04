@@ -106,7 +106,7 @@ export default function Projects() {
                     </p>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2 flex-grow px-2 pb-5">
+                <CardContent className="flex-grow px-2 pb-2">
                   <div className="mt-2 flex flex-wrap gap-1">
                     {project.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="px-2 py-1 text-xs">
@@ -115,7 +115,7 @@ export default function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="px-2 pb-2">
+                <CardFooter className="px-0 hover:px-2 transition-all duration-300 pb-2">
                   <Button
                     variant="ghost"
                     className="from-primary hover:text-primary-foreground group relative w-full justify-between overflow-hidden to-secondary transition-all duration-300 hover:bg-gradient-to-r"
