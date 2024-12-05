@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react'
 
 export function ReactIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -47,4 +47,3 @@ export function ExpressIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-

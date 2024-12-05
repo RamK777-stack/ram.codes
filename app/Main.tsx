@@ -9,9 +9,28 @@ import ProfileImage from '@/data/profile.jpg'
 import Projects from '@/components/Projects'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardHeader, CardContent, CardFooter, CardTitle } from '@/components/ui/card'
-import { Code, FileText, HelpCircle, Users, TrendingUp, FolderGit2, Star, Mail, Github, Linkedin, Twitter } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { ReactIcon, NextJsIcon, NodeIcon, TailwindIcon, TypeScriptIcon, ExpressIcon } from "@/components/social-icons/tech-icons"
+import {
+  Code,
+  FileText,
+  HelpCircle,
+  Users,
+  TrendingUp,
+  FolderGit2,
+  Star,
+  Mail,
+  Github,
+  Linkedin,
+  Twitter,
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import {
+  ReactIcon,
+  NextJsIcon,
+  NodeIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  ExpressIcon,
+} from '@/components/social-icons/tech-icons'
 
 const MAX_DISPLAY = 5
 
@@ -130,23 +149,25 @@ export default function Home({ posts }) {
       )}
 
       <section className="mt-24 space-y-12">
-        <div className="text-center space-y-4">
+        <div className="space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter">My Services</h2>
-          <p className="max-w-[600px] mx-auto text-gray-500">
-            I offer a range of services to help bring your digital projects to life. From full-stack development to technical writing and expert guidance, I'm here to support your success.
+          <p className="mx-auto max-w-[600px] text-gray-500">
+            I offer a range of services to help bring your digital projects to life. From full-stack
+            development to technical writing and expert guidance, I'm here to support your success.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
-          <Card className="flex h-full flex-col transition-shadow hover:shadow-lg overflow-hidden">
-            <CardContent className="p-6 flex flex-col items-center text-center">
-              <Code className="w-12 h-12 mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">Full Stack Web Development</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                Give me a design file, and I'll convert it into a fully functional website and deploy it. My tech stack includes React, Next.js, Node.js, and Express.
+          <Card className="flex h-full flex-col overflow-hidden transition-shadow hover:shadow-lg">
+            <CardContent className="flex flex-col items-center p-6 text-center">
+              <Code className="text-primary mb-4 h-12 w-12" />
+              <h3 className="mb-2 text-xl font-semibold">Full Stack Web Development</h3>
+              <p className="mb-4 text-sm text-gray-500">
+                Give me a design file, and I'll convert it into a fully functional website and
+                deploy it. My tech stack includes React, Next.js, Node.js, and Express.
               </p>
             </CardContent>
-            <CardFooter className='mt-auto flex flex-col items-center text-center'>
+            <CardFooter className="mt-auto flex flex-col items-center text-center">
               <Button variant="outline" size="sm" asChild>
                 <Link href="mailto:your-email@example.com?subject=Full%20Stack%20Web%20Development%20Inquiry">
                   Get a Quote
@@ -155,15 +176,16 @@ export default function Home({ posts }) {
             </CardFooter>
           </Card>
 
-          <Card className="flex h-full flex-col transition-shadow hover:shadow-lg overflow-hidden">
-            <CardContent className="p-6 flex flex-col items-center text-center">
-              <FileText className="w-12 h-12 mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">Technical Writing</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                I specialize in creating clear, concise, and informative technical content. From documentation to tutorials, I'll help communicate complex ideas effectively.
+          <Card className="flex h-full flex-col overflow-hidden transition-shadow hover:shadow-lg">
+            <CardContent className="flex flex-col items-center p-6 text-center">
+              <FileText className="text-primary mb-4 h-12 w-12" />
+              <h3 className="mb-2 text-xl font-semibold">Technical Writing</h3>
+              <p className="mb-4 text-sm text-gray-500">
+                I specialize in creating clear, concise, and informative technical content. From
+                documentation to tutorials, I'll help communicate complex ideas effectively.
               </p>
             </CardContent>
-            <CardFooter className='mt-auto flex flex-col items-center text-center'>
+            <CardFooter className="mt-auto flex flex-col items-center text-center">
               <Button variant="outline" size="sm" asChild>
                 <Link href="mailto:your-email@example.com?subject=Technical%20Writing%20Inquiry">
                   Request Content
@@ -172,16 +194,17 @@ export default function Home({ posts }) {
             </CardFooter>
           </Card>
 
-          <Card className="flex h-full flex-col transition-shadow hover:shadow-lg overflow-hidden">
-            <CardContent className="p-6 flex flex-col items-center text-center">
-              <HelpCircle className="w-12 h-12 mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">Guidance</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                Stuck with issues in your application or need tips? I'm here to help. Get expert guidance and support to overcome challenges and improve your projects.
+          <Card className="flex h-full flex-col overflow-hidden transition-shadow hover:shadow-lg">
+            <CardContent className="flex flex-col items-center p-6 text-center">
+              <HelpCircle className="text-primary mb-4 h-12 w-12" />
+              <h3 className="mb-2 text-xl font-semibold">Guidance</h3>
+              <p className="mb-4 text-sm text-gray-500">
+                Stuck with issues in your application or need tips? I'm here to help. Get expert
+                guidance and support to overcome challenges and improve your projects.
               </p>
             </CardContent>
-            <CardFooter className='mt-auto flex flex-col items-center text-center'>
-              <Button className='mt-auto' variant="outline" size="sm" asChild>
+            <CardFooter className="mt-auto flex flex-col items-center text-center">
+              <Button className="mt-auto" variant="outline" size="sm" asChild>
                 <Link href="mailto:your-email@example.com?subject=Guidance%20and%20Consultation%20Inquiry">
                   Schedule Consultation
                 </Link>
@@ -192,30 +215,30 @@ export default function Home({ posts }) {
       </section>
 
       <section className="mt-24">
-        <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">My Tech Stack</h2>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-8">
+        <h2 className="mb-12 text-center text-3xl font-bold tracking-tighter">My Tech Stack</h2>
+        <div className="grid grid-cols-3 gap-8 md:grid-cols-6">
           <div className="flex flex-col items-center justify-center">
-            <ReactIcon className="w-12 h-12 mb-2 text-[#61DAFB]" />
+            <ReactIcon className="mb-2 h-12 w-12 text-[#61DAFB]" />
             <span className="text-sm font-medium">React</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <NextJsIcon className="w-12 h-12 mb-2 text-[#000000]" />
+            <NextJsIcon className="mb-2 h-12 w-12 text-[#000000]" />
             <span className="text-sm font-medium">Next.js</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <NodeIcon className="w-12 h-12 mb-2 text-[#339933]" />
+            <NodeIcon className="mb-2 h-12 w-12 text-[#339933]" />
             <span className="text-sm font-medium">Node.js</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <TailwindIcon className="w-12 h-12 mb-2 text-[#38B2AC]" />
+            <TailwindIcon className="mb-2 h-12 w-12 text-[#38B2AC]" />
             <span className="text-sm font-medium">Tailwind CSS</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <TypeScriptIcon className="w-12 h-12 mb-2 text-[#3178C6]" />
+            <TypeScriptIcon className="mb-2 h-12 w-12 text-[#3178C6]" />
             <span className="text-sm font-medium">TypeScript</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <ExpressIcon className="w-12 h-12 mb-2 text-[#000000]" />
+            <ExpressIcon className="mb-2 h-12 w-12 text-[#000000]" />
             <span className="text-sm font-medium">Express</span>
           </div>
         </div>
