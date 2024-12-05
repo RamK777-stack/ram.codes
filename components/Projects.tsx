@@ -58,14 +58,12 @@ export default function Projects() {
     <>
       <div className="container mx-auto">
         <motion.h2
-          className="mb-2 text-center tracking-tight"
+          className="text-3xl font-bold text-center tracking-tight"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">
-            Personal Projects
-          </span>
+          Personal Projects
         </motion.h2>
         <motion.p
           className="px-3 py-2 text-center text-gray-600 dark:text-gray-400"

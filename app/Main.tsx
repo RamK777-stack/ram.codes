@@ -8,7 +8,10 @@ import SocialIcon from '@/components/social-icons'
 import ProfileImage from '@/data/profile.jpg'
 import Projects from '@/components/Projects'
 import { Badge } from '@/components/ui/badge'
-import { Card, CardHeader, CardFooter, CardTitle } from '@/components/ui/card'
+import { Card, CardHeader, CardContent, CardFooter, CardTitle } from '@/components/ui/card'
+import { Code, FileText, HelpCircle, Users, TrendingUp, FolderGit2, Star, Mail, Github, Linkedin, Twitter } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import { ReactIcon, NextJsIcon, NodeIcon, TailwindIcon, TypeScriptIcon, ExpressIcon } from "@/components/social-icons/tech-icons"
 
 const MAX_DISPLAY = 5
 
@@ -45,7 +48,7 @@ export default function Home({ posts }) {
           </div>
 
           <div className="mt-5 flex space-x-4 text-zinc-700">
-            <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
+            <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={5} />
             <SocialIcon kind="twitter" href={siteMetadata.twitter} size={5} />
             <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={5} />
             <SocialIcon kind="github" href={siteMetadata.github} size={5} />
@@ -62,17 +65,13 @@ export default function Home({ posts }) {
         </div>
       </div>
 
-      <section className="mt-14">
+      <section className="mt-24">
         <Projects />
       </section>
 
-      <div className="mt-14">
+      <div className="mt-24">
         <div className="text-center">
-          <div className="px-3 py-2">
-            <span className="rounded-full bg-gray-200 px-5 py-2 dark:bg-gray-800">
-              Technical Blog
-            </span>
-          </div>
+          <h2 className="text-3xl font-bold tracking-tighter">Technical blog</h2>
           <p className="px-3 py-2 text-gray-600 dark:text-gray-400">
             Explore my latest insights and technical articles
           </p>
@@ -129,6 +128,124 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
+
+      <section className="mt-24 space-y-12">
+        <div className="text-center space-y-4">
+          <h2 className="text-3xl font-bold tracking-tighter">My Services</h2>
+          <p className="max-w-[600px] mx-auto text-gray-500">
+            I offer a range of services to help bring your digital projects to life. From full-stack development to technical writing and expert guidance, I'm here to support your success.
+          </p>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          <Card className="flex h-full flex-col transition-shadow hover:shadow-lg overflow-hidden">
+            <CardContent className="p-6 flex flex-col items-center text-center">
+              <Code className="w-12 h-12 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">Full Stack Web Development</h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Give me a design file, and I'll convert it into a fully functional website and deploy it. My tech stack includes React, Next.js, Node.js, and Express.
+              </p>
+            </CardContent>
+            <CardFooter className='mt-auto flex flex-col items-center text-center'>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="mailto:your-email@example.com?subject=Full%20Stack%20Web%20Development%20Inquiry">
+                  Get a Quote
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          <Card className="flex h-full flex-col transition-shadow hover:shadow-lg overflow-hidden">
+            <CardContent className="p-6 flex flex-col items-center text-center">
+              <FileText className="w-12 h-12 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">Technical Writing</h3>
+              <p className="text-sm text-gray-500 mb-4">
+                I specialize in creating clear, concise, and informative technical content. From documentation to tutorials, I'll help communicate complex ideas effectively.
+              </p>
+            </CardContent>
+            <CardFooter className='mt-auto flex flex-col items-center text-center'>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="mailto:your-email@example.com?subject=Technical%20Writing%20Inquiry">
+                  Request Content
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          <Card className="flex h-full flex-col transition-shadow hover:shadow-lg overflow-hidden">
+            <CardContent className="p-6 flex flex-col items-center text-center">
+              <HelpCircle className="w-12 h-12 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">Guidance</h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Stuck with issues in your application or need tips? I'm here to help. Get expert guidance and support to overcome challenges and improve your projects.
+              </p>
+            </CardContent>
+            <CardFooter className='mt-auto flex flex-col items-center text-center'>
+              <Button className='mt-auto' variant="outline" size="sm" asChild>
+                <Link href="mailto:your-email@example.com?subject=Guidance%20and%20Consultation%20Inquiry">
+                  Schedule Consultation
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        </div>
+      </section>
+
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">My Tech Stack</h2>
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-8">
+          <div className="flex flex-col items-center justify-center">
+            <ReactIcon className="w-12 h-12 mb-2 text-[#61DAFB]" />
+            <span className="text-sm font-medium">React</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <NextJsIcon className="w-12 h-12 mb-2 text-[#000000]" />
+            <span className="text-sm font-medium">Next.js</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <NodeIcon className="w-12 h-12 mb-2 text-[#339933]" />
+            <span className="text-sm font-medium">Node.js</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <TailwindIcon className="w-12 h-12 mb-2 text-[#38B2AC]" />
+            <span className="text-sm font-medium">Tailwind CSS</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <TypeScriptIcon className="w-12 h-12 mb-2 text-[#3178C6]" />
+            <span className="text-sm font-medium">TypeScript</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <ExpressIcon className="w-12 h-12 mb-2 text-[#000000]" />
+            <span className="text-sm font-medium">Express</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      {/* <section className="mt-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="space-y-2 text-center">
+            <Users className="w-6 h-6 mx-auto mb-4 text-primary" />
+            <div className="text-2xl font-bold">12K</div>
+            <div className="text-sm text-gray-500">Clients</div>
+          </div>
+          <div className="space-y-2 text-center">
+            <TrendingUp className="w-6 h-6 mx-auto mb-4 text-primary" />
+            <div className="text-2xl font-bold">55%</div>
+            <div className="text-sm text-gray-500">Annual growth</div>
+          </div>
+          <div className="space-y-2 text-center">
+            <FolderGit2 className="w-6 h-6 mx-auto mb-4 text-primary" />
+            <div className="text-2xl font-bold">5k</div>
+            <div className="text-sm text-gray-500">Projects</div>
+          </div>
+          <div className="space-y-2 text-center">
+            <Star className="w-6 h-6 mx-auto mb-4 text-primary" />
+            <div className="text-2xl font-bold">80%</div>
+            <div className="text-sm text-gray-500">Positive ratings</div>
+          </div>
+        </div>
+      </section> */}
       {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
